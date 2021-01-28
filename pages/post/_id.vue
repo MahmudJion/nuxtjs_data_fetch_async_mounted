@@ -2,7 +2,6 @@
     <div>
         <b-container>
         <div>
-        <Navbar />
         <b-card>
             <b-card-text>
                 <h1>{{ singlePost.title }}</h1>

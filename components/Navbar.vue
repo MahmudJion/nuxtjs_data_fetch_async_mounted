@@ -6,9 +6,6 @@
         <b-navbar-brand>Nuxtjs Blog</b-navbar-brand>
 
         <b-collapse id="nav-text-collapse" is-nav>
-        <b-navbar-nav>
-            <b-nav-text>using async and mounted methods</b-nav-text>
-        </b-navbar-nav>
         </b-collapse>
     </b-navbar>
     </div>
