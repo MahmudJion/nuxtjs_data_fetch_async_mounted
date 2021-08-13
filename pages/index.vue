@@ -3,6 +3,8 @@
     <b-container>
         <div>
         <Navbar />
+        <br>
+
         <b-card header="Latest Post">
             <b-list-group>
             <div v-for="(post,index) in latestPost" :key="index">
@@ -15,6 +17,8 @@
             </div>
         </b-list-group>
         </b-card>
+        <br>
+
         <Post/>
         </div>
     </b-container>
