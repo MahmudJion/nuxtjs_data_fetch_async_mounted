@@ -2,12 +2,14 @@
     <div>
         <b-container>
         <div>
-        <b-card>
+        <br>
+
+        <b-card v-if="singlePost">
             <b-card-text>
                 <h1>{{ singlePost.title }}</h1>
                 <p>{{ singlePost.body }}</p>
             </b-card-text>
-            <b-button variant="outline-primary" @click="backButton">Back</b-button>
+            <b-button variant="outline-danger" @click="backButton">Back</b-button>
         </b-card>
         </div>
     </b-container>
