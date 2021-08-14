@@ -9,7 +9,7 @@
             <b-list-group>
             <div v-for="(post,index) in latestPost" :key="index">
                 <b-list-group-item>
-                    <nuxt-link :to="{name: 'post-id', params: { id:post.id }}">
+                    <nuxt-link :to="{name: 'post-id', params: { id:post.id }}" style="color: black; text-decoration: none">
                         <h3>{{ post.title }}</h3>
                         <p>{{ post.body }}</p>
                     </nuxt-link>
