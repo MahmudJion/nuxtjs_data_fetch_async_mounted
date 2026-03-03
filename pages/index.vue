@@ -28,15 +28,20 @@
 <script>
 import axios from "axios";
 export default {
-    async asyncData ({ query, error }) {
-		let [latestPostResponse ] = await Promise.all([
-			axios.get(`https://jsonplaceholder.typicode.com/posts?_start=0&_limit=10`)
-		])
-		return{
-            latestPost: latestPostResponse.data
-		}
-	}
-}
+    async asyncData ({ error }) {
+      try {
+        const response = await axios.get(
+          `https://jsonplaceholder.typicode.com/posts?_start=0&_limit=10`
+        );
+        return {
+          latestPost: response.data
+        };
+      } catch (err) {
+        // let Nuxt show an error page if the fetch fails
+        error({ statusCode: err.response?.status || 500, message: err.message });
+      }
+    }
+};
 </script>
 
 <style>
