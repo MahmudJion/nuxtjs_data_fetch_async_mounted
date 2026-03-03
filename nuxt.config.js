@@ -19,11 +19,9 @@ export default {
   ],
   modules: [
     // Doc: https://bootstrap-vue.js.org
-    'bootstrap-vue/nuxt',
-    // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios',
+    'bootstrap-vue/nuxt'
   ],
-  axios: {},
+  // axios configuration removed; using direct import to avoid vulnerable nested versions
   build: {
   }
 }
