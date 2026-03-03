@@ -10,10 +10,16 @@
     "serve": "nuxt serve"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.13.6",
-    "axios": ">=1.13.5",
-    "bootstrap": "^5.2.3",
+    "axios": "^1.13.5",
+    "bootstrap": "^5.3.8",
     "bootstrap-vue": "^2.23.1",
-    "nuxt": "^3.19.0"
+    "nuxt": "^2.16.3"
+  },
+  "overrides": {
+    "axios": "^1.13.5"
+  },
+  "engines": {
+    "node": ">=14 <=20",
+    "npm": ">=6"
   }
 }
