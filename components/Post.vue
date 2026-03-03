@@ -23,11 +23,15 @@ export default {
 			popularPost: ''
 		};
     },
-    mounted (){
-		axios.get(`https://jsonplaceholder.typicode.com/posts?_start=11&_limit=20`
-		).then((response) => {
-			this.popularPost = response.data
-		})
-	}
+    async mounted (){
+      try {
+        const response = await axios.get(
+          `https://jsonplaceholder.typicode.com/posts?_start=11&_limit=20`
+        );
+        this.popularPost = response.data;
+      } catch (err) {
+        console.error('Popular posts fetch failed', err);
+      }
+    }
 }
 </script>
